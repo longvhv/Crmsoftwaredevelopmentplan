@@ -8,13 +8,14 @@
 
 import React from 'react';
 import type { LucideIcon } from 'lucide-react';
+import { Check, X, AlertTriangle, AlertCircle, Loader2 } from 'lucide-react';
 import {
   getIconClass,
   iconWithBadge,
   type IconSize,
   type IconColor,
   type IconAnimation,
-} from '@/app/utils/icons';
+} from '@/utils/icons';
 import { cn } from '@/lib/utils';
 
 /* ============================================================
@@ -316,7 +317,7 @@ export const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
       >
         {loading ? (
           <Icon
-            icon={require('lucide-react').Loader2}
+            icon={Loader2}
             size={size}
             color="inherit"
             animated="spin"
@@ -409,27 +410,27 @@ export const StatusIcon = React.forwardRef<SVGSVGElement, StatusIconProps>(
   ({ status, colorize = true, color, animated, ...props }, ref) => {
     const statusConfig = {
       success: {
-        icon: require('lucide-react').Check,
+        icon: Check,
         color: 'success' as IconColor,
         animated: undefined,
       },
       error: {
-        icon: require('lucide-react').X,
+        icon: X,
         color: 'error' as IconColor,
         animated: undefined,
       },
       warning: {
-        icon: require('lucide-react').AlertTriangle,
+        icon: AlertTriangle,
         color: 'warning' as IconColor,
         animated: undefined,
       },
       info: {
-        icon: require('lucide-react').AlertCircle,
+        icon: AlertCircle,
         color: 'info' as IconColor,
         animated: undefined,
       },
       loading: {
-        icon: require('lucide-react').Loader2,
+        icon: Loader2,
         color: 'muted' as IconColor,
         animated: 'spin' as IconAnimation,
       },

@@ -5,6 +5,7 @@
  * ============================================================ */
 
 import { useCallback, useEffect, useRef } from "react";
+import type { KeyboardEvent } from "react";
 
 /* ============================================================
  * Focus Trap Hook
@@ -84,7 +85,7 @@ export function useRovingTabIndex(itemCount: number, orientation: "horizontal" |
   }, []);
 
   const handleKeyDown = useCallback(
-    (e: React.KeyboardEvent) => {
+    (e: KeyboardEvent) => {
       const prevKeys = orientation === "horizontal" ? ["ArrowLeft"] : orientation === "vertical" ? ["ArrowUp"] : ["ArrowLeft", "ArrowUp"];
       const nextKeys = orientation === "horizontal" ? ["ArrowRight"] : orientation === "vertical" ? ["ArrowDown"] : ["ArrowRight", "ArrowDown"];
 

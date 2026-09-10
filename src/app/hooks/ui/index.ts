@@ -85,3 +85,6 @@ export type {
   UseTableStateReturn,
   UseSimpleTableOptions,
 } from "./useTableState";
+
+// Focus Management
+export { useFocusTrap, useRovingTabIndex, useSkipToContent } from "./useFocusManagement";

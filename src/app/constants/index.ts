@@ -30,6 +30,9 @@ export * from "./messages";
 // Feature Flags
 export * from "./features";
 
+// Breakpoints & Responsive
+export * from "./breakpoints";
+
 // Legacy configs (keep for backward compatibility)
 export * from "./crmConfig";
 export * from "./planConfig";
